@@ -1,16 +1,15 @@
-let value = 10; // число
-value = "текст"; // теперь строка — ошибки не будет
-console.log(value); // 'текст'
+// В браузере:
+//console.log(window.innerHeight); // высота окна
+// В Node.js:
+console.log(global.process.version); // версия Node.js
+// Универсально:
+//console.log(globalThis === window); // true в браузере
 
-const fixed = 100;
-// fixed = 200;     // ошибка: Assignment to constant variable
-
-const name = "Алексей";
-const age = 20;
-const userProfile = {
-    name, // вместо name: name
-    age, // вместо age: age
-    isStudent: true,
+const myCity = {
+    city: "Нижний Новгород",
+    greeting() {
+        // вместо greeting: function() {...}
+        console.log("Greetings!");
+    },
 };
-
-console.log(userProfile);
+myCity.greeting(); // вызов метода
