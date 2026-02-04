@@ -1,15 +1,12 @@
-// В браузере:
-//console.log(window.innerHeight); // высота окна
-// В Node.js:
-console.log(global.process.version); // версия Node.js
-// Универсально:
-//console.log(globalThis === window); // true в браузере
-
-const myCity = {
-    city: "Нижний Новгород",
-    greeting() {
-        // вместо greeting: function() {...}
-        console.log("Greetings!");
-    },
+const post = {
+    title: "My post",
+    likes: 5,
 };
-myCity.greeting(); // вызов метода
+
+// Объект → JSON (строка)
+const postString = JSON.stringify(post);
+console.log(postString); // {"title":"My post","likes":5}
+
+// JSON → объект
+const parsedPost = JSON.parse(postString);
+console.log(parsedPost.title); // 'My post'
