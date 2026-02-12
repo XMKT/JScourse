@@ -1,9 +1,8 @@
-const add = (a, b) => a + b;
-console.log(add(2, 3)); // 5
+const multiply = (value, multiplier = 1) => value * multiplier;
 
-setTimeout(() => console.log("Delayed message"), 1000);
-
-function multiply(value, multiplier = 1) {
-    return value * multiplier;
-}
-console.log(multiply(5)); // 5
+const createPost = (post, createdAt = new Date()) => ({
+    ...post,
+    createdAt,
+});
+const post = { id: 1, title: "News" };
+console.log(createPost(post));
