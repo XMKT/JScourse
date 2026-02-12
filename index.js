@@ -1,16 +1,10 @@
-let value = 10;
-if (value > 5) {
-    value += 20;
+function sumPositiveNums(a, b) {
+    if (typeof a !== "number" || typeof b !== "number") {
+        return "One of the arguments is not a number";
+    }
+    if (a <= 0 || b <= 0) {
+        return "Numbers are not positive";
+    }
+    return a + b;
 }
-console.log(value); // 30
-
-let age = 25;
-if (age > 18) {
-    console.log("Adult");
-}
-if (age >= 12 && age <= 18) {
-    console.log("Teenager");
-}
-if (age < 12) {
-    console.log("Child");
-}
+console.log(sumPositiveNums(3, 8)); // 11
