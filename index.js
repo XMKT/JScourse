@@ -1,10 +1,9 @@
-console.log(10 + " apples"); // "10 apples"
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // 5
 
-function sum(a, b) {
-    return a + b;
+setTimeout(() => console.log("Delayed message"), 1000);
+
+function multiply(value, multiplier = 1) {
+    return value * multiplier;
 }
-
-// Function Expression
-const multiply = function (a, b) {
-    return a * b;
-};
+console.log(multiply(5)); // 5
