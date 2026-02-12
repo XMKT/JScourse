@@ -1,6 +1,13 @@
-const arr = [2, 3];
-arr.unshift(1);
-console.log(arr); // [1, 2, 3]
-const first = arr.shift();
-console.log(first); // 1
-console.log(arr); // [2, 3]
+const fruits = ["apple", "banana", "cherry"];
+fruits.forEach((fruit, index) => console.log(`${index}: ${fruit}`));
+
+// Правильно
+const arr = [1, 2, 3];
+const result = arr.map((x) => x * 3);
+console.log(result); // [3, 6, 9]
+
+// Ошибка: нет return
+const wrong = arr.map((x) => {
+    x * 3;
+});
+console.log(wrong); // [undefined, undefined, undefined]
